@@ -15,7 +15,7 @@ const Navbar = () => {
       minW={{ base: "100vw", md: "auto" }} // Full width on small screens, 4vw on medium and up
       h={{ base: "10vh", md: "50vh" }} // 10vh height for small screens, 60vh for medium and up
       position={{ base: "absolute", md: "sticky" }} // Absolute positioning for small screens, sticky for medium and up
-      bottom={{ base: 10, md: "auto" }} // Bottom for small screens, default on larger screens
+      bottom={{ base: '100px', md: "auto" }} // Bottom for small screens, default on larger screens
       left={{ base: 0, md: "40px" }}
       borderRadius={{ base: "0", md: "50px" }} // No border radius on small screens
       display="flex"
