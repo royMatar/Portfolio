@@ -57,7 +57,7 @@ const Home = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         marginBottom="10px"
       >
-        I'm Roy Matar
+        I&rsquo;m Roy Matar
       </MotionHeading>
       <MotionHeading
         as="h1"

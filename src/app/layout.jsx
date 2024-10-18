@@ -1,21 +1,11 @@
-import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { fonts } from "./fonts";
 import Navbar from "./components/Navbar";
-import Footer from './components/Footer';
-import HeartbeatSignal from './components/icons/Signal';
-import { Box } from '@chakra-ui/react';
+import Footer from "./components/Footer";
+import HeartbeatSignal from "./components/icons/Signal";
+import { Box } from "@chakra-ui/react";
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Roy Matar's Portfolio - Web Developer",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className={fonts.rubik.variable}>
       <body>
@@ -30,10 +20,10 @@ export default function RootLayout({
             {/* Heartbeat Signal */}
             <Box
               position="absolute"
-              top={{ base: '10px', md: 'auto' }}  // Top for small screens, auto for large screens
-              left={{ base: '10px', md: '52%' }}  // Center horizontally for large screens
-              bottom={{ base: 'auto', md: '20px' }}  // Move to bottom for large screens
-              transform={{ base: 'none', md: 'translateX(-50%)' }}  // Center horizontally for large screens
+              top={{ base: "10px", md: "auto" }} // Top for small screens, auto for large screens
+              left={{ base: "10px", md: "52%" }} // Center horizontally for large screens
+              bottom={{ base: "auto", md: "20px" }} // Move to bottom for large screens
+              transform={{ base: "none", md: "translateX(-50%)" }} // Center horizontally for large screens
               padding="10px"
               zIndex="1000"
             >

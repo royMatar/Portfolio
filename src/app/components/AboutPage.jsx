@@ -34,9 +34,9 @@ const AboutPage = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
       >
         <Text fontSize="lg" lineHeight="tall">
-          Hi, I’m Roy Matar, a passionate web developer with a background in
+          Hi, I&rsquo;m Roy Matar, a passionate web developer with a background in
           mechanical engineering. After transitioning into the world of web
-          development, I’ve become specialized in working with React, Django,
+          development, I&rsquo;ve become specialized in working with React, Django,
           and Django Rest Framework. I enjoy building full-stack applications,
           from e-commerce platforms to SaaS applications, and have a deep
           interest in 3D modeling and IoT solutions.<br></br>
