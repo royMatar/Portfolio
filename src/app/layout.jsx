@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { fonts } from "./fonts";
-import Navbar from "../app/components/Navbar";
-import Footer from '../app/components/Footer';
-import HeartbeatSignal from '../app/components/icons/Signal';
+import Navbar from "./components/Navbar";
+import Footer from './components/Footer';
+import HeartbeatSignal from './components/icons/Signal';
 import { Box } from '@chakra-ui/react';
 
 export const metadata: Metadata = {
