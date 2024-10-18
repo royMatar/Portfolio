@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import HomePage from './components/HomePage'
-export default function Home() {
+import PortfolioPage from '../components/PortfolioPage'
+export default function Portfolio() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -14,10 +14,10 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <>
       {!showContent && (
         <>
-   <motion.div
+          <motion.div
             style={{
               position: "fixed",
               top: 0,
@@ -45,12 +45,7 @@ export default function Home() {
           />
         </>
       )}
-      {/* Content Fade-In Animation */}
-      {showContent && (<>
-        <h2><HomePage/></h2>
-          </>
-
-      )}
-    </main>
+      {showContent && <PortfolioPage/>}
+    </>
   );
 }

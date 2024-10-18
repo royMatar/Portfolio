@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import HomePage from './components/HomePage'
-export default function Home() {
+import ContactPage from '../components/ContactPage'
+export default function Contact() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -14,27 +14,29 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <>
       {!showContent && (
         <>
-   <motion.div
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0, 
-              height: "100vh",
-              background: "linear-gradient(to right, #00C6FF, #0072FF)", 
-              zIndex: 1000,
-            }}
-            initial={{ width: "0%" }}  
-            animate={{ width: "200%" }}  
-            transition={{ duration: 0.4 }}
-          />
+          {/* Gradient Background Animation */}
           <motion.div
             style={{
               position: "fixed",
-              top: 0,
-              left: 0,  
+              bottom: 0,  // Start animation from the bottom
+              left: 0,
+              height: "100vh", // Set width to full
+              background: "linear-gradient(to right, #00C6FF, #0072FF)",
+              zIndex: 1000,
+            }}
+            initial={{ width: "0%" }}  // Animate height instead of width
+            animate={{ width: "200%" }}  // Expand the height upwards
+            transition={{ duration: 0.4 }}
+          />
+          {/* Black Background Animation */}
+          <motion.div
+            style={{
+              position: "fixed",
+              bottom: 0,  // Start from the bottom for the black background
+              left: 0,
               height: "100vh",
               backgroundColor: "black",
               zIndex: 1000,
@@ -45,12 +47,7 @@ export default function Home() {
           />
         </>
       )}
-      {/* Content Fade-In Animation */}
-      {showContent && (<>
-        <h2><HomePage/></h2>
-          </>
-
-      )}
-    </main>
+      {showContent && <ContactPage/>}
+    </>
   );
 }
