@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import LinkedinIcon from "../components/icons/LinkedinIcon";
-import GithubIcon from "../components/icons/GithubIcon";
 import { motion } from "framer-motion";
 import { useBreakpointValue, Box, HStack, VStack } from "@chakra-ui/react";
+import LinkedinIcon from "../components/icons/LinkedinIcon";
+import GithubIcon from "../components/icons/GithubIcon";
 
 const Footer = () => {
   const positionStyles = useBreakpointValue({
@@ -16,7 +15,7 @@ const Footer = () => {
     md: {
       position: "fixed",
       top: "40vh",
-      right:'40px'
+      right: '40px',
     },
   });
 
@@ -29,24 +28,34 @@ const Footer = () => {
   const IconLayout = layout;
 
   return (
-    <Box zIndex={2000} display="flex" {...positionStyles}>
+    <Box zIndex={2000} display="flex" {...positionStyles} backgroundColor="black" borderRadius='50px' pt='10px' pb='10px' px={{base:'10px', md:0}}>
       <IconLayout spacing={layout === HStack ? "10px" : "20px"}>
         <motion.div
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           style={{ perspective: 1000 }}
         >
-          <Link href="/">
+          {/* LinkedIn Link */}
+          <a
+            href="https://www.linkedin.com/in/roy-matar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkedinIcon />
-          </Link>
+          </a>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
         >
-          <Link href="/about">
+          {/* GitHub Link */}
+          <a
+            href="https://github.com/royMatar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GithubIcon />
-          </Link>
+          </a>
         </motion.div>
       </IconLayout>
     </Box>

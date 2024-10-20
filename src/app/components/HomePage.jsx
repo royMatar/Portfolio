@@ -33,7 +33,7 @@ const Home = () => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      height="100vh"
+      height="90vh"
       zIndex={1}
       as={motion.div}
       initial="hidden"
@@ -75,12 +75,11 @@ const Home = () => {
             bg="black"
             color="white"
             border="1px solid"
-            initial={{ scale: 1, opacity: 0 }}
-            animate={{ scale: 1.1, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{  opacity: 1 }}
             whileHover={{ scale: 1.2, backgroundColor: 'black' }}
             whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.1, ease: "easeOut", delay:0.9 }}
-            _hover={{ boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay:0.9 }}
           >
             About
           </MotionButton>
@@ -95,12 +94,11 @@ const Home = () => {
                 background: 'linear-gradient(135deg, #0072FF 0%, #00C6FF 100%)',
               },
             }}
-            initial={{ scale: 1, opacity: 0 }}
-            animate={{ scale: 1.1, opacity: 1 }}
+            initial={{  opacity: 0 }}
+            animate={{  opacity: 1 }}
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ duration: 0.1, ease: "easeOut", delay:1.2 }}
-            _hover={{ boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay:1.2 }}
           >
             Contact Me
           </MotionButton>

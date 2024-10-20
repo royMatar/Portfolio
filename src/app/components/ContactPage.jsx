@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import ContactForm from "./ContactForm";
 
 // Define motion component for Box
 const MotionBox = motion(Box);
@@ -10,7 +11,7 @@ const PortfolioPage = () => {
       maxW="800px"
       mx="auto"
       p={6}
-      pt={{ base: "70px", md: "300px" }}
+      pt={{ base: "70px", md: "100px" }}
       color="gray.100"
       borderRadius="md"
       boxShadow="lg"
@@ -28,15 +29,7 @@ const PortfolioPage = () => {
         </Heading>
       </MotionBox>
 
-      <MotionBox
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-      >
-        <Text fontSize="lg" lineHeight="tall">
-         Coming Soon!
-        </Text>
-      </MotionBox>
+     <ContactForm/>
       {/* <MotionBox
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}

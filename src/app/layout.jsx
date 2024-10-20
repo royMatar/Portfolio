@@ -26,6 +26,8 @@ export default function RootLayout({ children }) {
               transform={{ base: "none", md: "translateX(-50%)" }} // Center horizontally for large screens
               padding="10px"
               zIndex="1000"
+              backgroundColor='black'
+              borderRadius='50px'
             >
               <HeartbeatSignal />
             </Box>

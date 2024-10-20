@@ -12,11 +12,13 @@ const Navbar = () => {
   return (
     <Box
       as="nav"
-      minW={{ base: "100vw", md: "auto" }} // Full width on small screens, 4vw on medium and up
-      h={{ base: "10vh", md: "50vh" }} // 10vh height for small screens, 60vh for medium and up
-      position={{ base: "absolute", md: "sticky" }} // Absolute positioning for small screens, sticky for medium and up
-      bottom={{ base: '100px', md: "auto" }} // Bottom for small screens, default on larger screens
+      backgroundColor={{base:'black', md:'transparent'}}
+      minW={{ base: "100vw", md: "auto" }} // Full width on small screens, auto on medium and up
+      h={{ base: "10vh", md: "50vh" }} // 10vh height for small screens, 50vh for medium and up
+      position={{ base: "fixed", md: "sticky" }} // Fixed positioning for small screens, sticky for medium and up
+      bottom={{ base: 0, md: "auto" }} // Stick to the bottom on small screens, default for larger screens
       left={{ base: 0, md: "40px" }}
+      paddingBottom={{ base: "env(safe-area-inset-bottom)", md: "0" }} // Adjust for dynamic safe areas on mobile
       borderRadius={{ base: "0", md: "50px" }} // No border radius on small screens
       display="flex"
       alignItems="center"
@@ -30,13 +32,13 @@ const Navbar = () => {
         display="flex"
         flexDirection={{ base: "row", md: "column" }} 
         alignItems="center"
-        justifyContent="space-around" // Space items evenly on small screens
+        justifyContent="space-around"
         w="100%"
         h="100%"
       >
         <motion.div
           whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9,}}
+          whileTap={{ scale: 0.9 }}
         >
           <ListItem mt={{ base: 0, md: "20px" }}>
             <Link href="/">
@@ -47,7 +49,7 @@ const Navbar = () => {
 
         <motion.div
           whileHover={{ scale: 1.2, borderRadius: "12px" }}
-          whileTap={{ scale: 0.9}}
+          whileTap={{ scale: 0.9 }}
         >
           <ListItem mt={{ base: 0, md: "30px" }}>
             <Link href="/about">
@@ -71,7 +73,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
         >
-          <ListItem mt={{ base: 0, md: "30px" }} mb={{base:0, md:"20px"}}>
+          <ListItem mt={{ base: 0, md: "30px" }} mb={{ base: 0, md: "20px" }}>
             <Link href="/contact">
               <ContactIcon />
             </Link>
