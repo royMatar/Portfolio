@@ -77,8 +77,7 @@ const Home = () => {
             border="1px solid"
             initial={{ opacity: 0 }}
             animate={{  opacity: 1 }}
-            whileHover={{ scale: 1.2, backgroundColor: 'black' }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{backgroundColor: 'black' }}
             transition={{ duration: 0.6, ease: "easeOut", delay:0.9 }}
           >
             About
@@ -96,8 +95,6 @@ const Home = () => {
             }}
             initial={{  opacity: 0 }}
             animate={{  opacity: 1 }}
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.9 }}
             transition={{ duration: 0.6, ease: "easeOut", delay:1.2 }}
           >
             Contact Me

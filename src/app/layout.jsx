@@ -5,6 +5,41 @@ import Footer from "./components/Footer";
 import HeartbeatSignal from "./components/icons/Signal";
 import { Box } from "@chakra-ui/react";
 
+export const metadata = {
+  title: "Roy Matar Portfolio",
+  description: "Roy Matar's portfolio showcasing my projects and skills in web development, mechanical engineering, and more.",
+  keywords: "Roy Matar, portfolio, web development, mechanical engineering, React, Django, projects",
+  authors: [{ name: "Roy Matar", url: "https://roymatar.com" }], // Add your website URL
+  creator: "Roy Matar",
+  openGraph: {
+    title: "Roy Matar Portfolio",
+    description: "Roy Matar's portfolio showcasing my projects and skills in web development, mechanical engineering, and more.",
+    url: "https://roymatar.com", // Add your website URL
+    siteName: "Roy Matar",
+    images: [
+      {
+        url: "/path/to/image.jpg", // Add an image for the Open Graph
+        width: 800,
+        height: 600,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Roy Matar's Portfolio",
+    description: "Roy Matar's portfolio showcasing my projects and skills in web development, mechanical engineering, and more.",
+    images: "/path/to/image.jpg", // Add an image for Twitter
+  },
+  metadataBase: new URL("https://roymatar.com"), // Set your website's base URL here
+};
+
+// Move viewport to a separate export
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={fonts.rubik.variable}>

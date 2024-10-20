@@ -78,7 +78,7 @@ const ContactForm = () => {
           top="20px" // Positioned near the top
           right="20px" // Positioned to the right
           width="300px" // Optional: Set width for the alert box
-          zIndex={1500}
+          zIndex={2500}
         >
           <AlertIcon color="black" />
           <Box flex="1">
