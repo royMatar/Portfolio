@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^2.10.1",
     "@emotion/react": "^11.13.3",
@@ -19,8 +20,6 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-typewriter-effect": "^1.1.0",
-    "typewriter-effect": "^2.21.0",
     "yup": "^1.4.0"
   },
   "devDependencies": {

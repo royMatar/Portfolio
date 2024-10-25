@@ -15,11 +15,10 @@ const Footer = () => {
     md: {
       position: "fixed",
       top: "40vh",
-      right: '40px',
+      right: "40px",
     },
   });
 
-  // Determine the layout type based on screen size
   const layout = useBreakpointValue({
     base: HStack,
     md: VStack,
@@ -28,33 +27,60 @@ const Footer = () => {
   const IconLayout = layout;
 
   return (
-    <Box zIndex={2000} display="flex" {...positionStyles} backgroundColor="black" borderRadius='50px' pt='10px' pb='10px' px={{base:'10px', md:0}}>
+    <Box
+      zIndex={2000}
+      display="flex"
+      {...positionStyles}
+      // backgroundColor="black"
+      borderRadius="50px"
+      pt="10px"
+      pb="10px"
+      px={{ base: "10px", md: 0 }}
+    >
       <IconLayout spacing={layout === HStack ? "10px" : "20px"}>
         <motion.div
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           style={{ perspective: 1000 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          {/* LinkedIn Link */}
           <a
             href="https://www.linkedin.com/in/roy-matar"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedinIcon />
+            <Box
+              bg="black"
+              borderRadius="50%"
+              p="10px"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <LinkedinIcon />
+            </Box>
           </a>
         </motion.div>
         <motion.div
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-          {/* GitHub Link */}
           <a
             href="https://github.com/royMatar"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GithubIcon />
+            <Box
+              bg="black"
+              borderRadius="50%"
+              p="10px"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <GithubIcon />
+            </Box>
           </a>
         </motion.div>
       </IconLayout>

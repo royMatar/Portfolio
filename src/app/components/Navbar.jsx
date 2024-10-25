@@ -12,73 +12,58 @@ const Navbar = () => {
   return (
     <Box
       as="nav"
-      backgroundColor={{base:'black', md:'transparent'}}
-      minW={{ base: "100vw", md: "auto" }} // Full width on small screens, auto on medium and up
-      h={{ base: "10vh", md: "50vh" }} // 10vh height for small screens, 50vh for medium and up
-      position={{ base: "fixed", md: "sticky" }} // Fixed positioning for small screens, sticky for medium and up
-      bottom={{ base: 0, md: "auto" }} // Stick to the bottom on small screens, default for larger screens
+      backgroundColor={{ base: "transparent", md: "transparent" }}
+      minW={{ base: "100vw", md: "auto" }}
+      h={{ base: "10vh", md: "50vh" }}
+      position={{ base: "fixed", md: "sticky" }}
+      bottom={{ base: 0, md: "auto" }}
       left={{ base: 0, md: "40px" }}
-      paddingBottom={{ base: "env(safe-area-inset-bottom)", md: "0" }} // Adjust for dynamic safe areas on mobile
-      borderRadius={{ base: "0", md: "50px" }} // No border radius on small screens
+      paddingBottom={{ base: "env(safe-area-inset-bottom)", md: "0" }}
+      borderRadius={{ base: "0", md: "50px" }}
       display="flex"
       alignItems="center"
       justifyContent="center"
       zIndex={2000}
       top={{ md: "50%" }}
-      transform={{ md: "translateY(-50%)" }} 
+      transform={{ md: "translateY(-50%)" }}
     >
       <UnorderedList
         listStyleType="none"
         display="flex"
-        flexDirection={{ base: "row", md: "column" }} 
+        flexDirection={{ base: "row", md: "column" }}
         alignItems="center"
         justifyContent="space-around"
         w="100%"
         h="100%"
       >
-        <motion.div
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <ListItem mt={{ base: 0, md: "20px" }}>
-            <Link href="/">
-              <HomeIcon />
-            </Link>
-          </ListItem>
-        </motion.div>
-
-        <motion.div
-          whileHover={{ scale: 1.2, borderRadius: "12px" }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <ListItem mt={{ base: 0, md: "30px" }}>
-            <Link href="/about">
-              <AboutIcon />
-            </Link>
-          </ListItem>
-        </motion.div>
-
-        <motion.div
-          whileHover={{ scale: 1.2, borderRadius: "12px" }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <ListItem mt={{ base: 0, md: "30px" }}>
-            <Link href="/portfolio">
-              <PortfolioIcon />
-            </Link>
-          </ListItem>
-        </motion.div>
-
-        <motion.div
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <ListItem mt={{ base: 0, md: "30px" }} mb={{ base: 0, md: "20px" }}>
-            <Link href="/contact">
-              <ContactIcon />
-            </Link>
-          </ListItem>
-        </motion.div>
+        {[
+          { href: "/", icon: <HomeIcon /> },
+          { href: "/about", icon: <AboutIcon /> },
+          { href: "/portfolio", icon: <PortfolioIcon /> },
+          { href: "/contact", icon: <ContactIcon /> },
+        ].map(({ href, icon }, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <ListItem mt={{ base: 0, md: "30px" }}>
+              <Link href={href}>
+                <Box
+                  bg="black"
+                  borderRadius="50%"
+                  p="10px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  {icon}
+                </Box>
+              </Link>
+            </ListItem>
+          </motion.div>
+        ))}
       </UnorderedList>
     </Box>
   );

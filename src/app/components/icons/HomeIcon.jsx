@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useBreakpointValue } from "@chakra-ui/react";
+import { useBreakpointValue , Tooltip} from "@chakra-ui/react";
 const HomeIcon = () => {
   const iconSize = useBreakpointValue({ base: "40", md: "60" });
 
   return (
+    <Tooltip label="Home" fontSize="lg" m={5} placement="right">
+
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -31,6 +33,7 @@ const HomeIcon = () => {
         />
       </svg>
     </div>
+    </Tooltip>
   );
 };
 

@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useBreakpointValue } from "@chakra-ui/react";
+import { useBreakpointValue,Tooltip } from "@chakra-ui/react";
 
 const ContactIcon = () => {
   const iconSize = useBreakpointValue({ base: "40", md: "60" });
   return (
+    <Tooltip label="Contact" fontSize="lg" m={5} placement="right">
+
     <div>
       <svg
         viewBox="0 0 24 24"
@@ -38,7 +40,7 @@ const ContactIcon = () => {
           />
         </g>
       </svg>
-    </div>
+    </div></Tooltip>
   );
 };
 
