@@ -42,8 +42,8 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={fonts.rubik.variable}>
-      <body>
+    <html lang="en" className={fonts.rubik.variable} style={{ backgroundColor: "black" }}>
+      <body style={{ margin: 0, backgroundColor: "black" }}>
         <Providers>
           <Box
             display="flex"
