@@ -29,7 +29,7 @@ const PortfolioPage = () => {
         </Heading>
       </MotionBox>
 
-      <Box position="relative" height="400px" width="300px">
+      <Box position="relative" minHeight="400px" width="300px">
       <ProjectCards/>
     </Box>
       {/* <MotionBox

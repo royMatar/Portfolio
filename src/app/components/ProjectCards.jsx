@@ -108,6 +108,7 @@ const ProjectCardStack = () => {
               left="50%"
               transform="translate(-50%, -50%)"
               zIndex="20"
+              m={4}
             >
               <motion.div
                 layoutId={selectedId}
