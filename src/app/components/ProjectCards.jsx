@@ -4,10 +4,10 @@ import { Box, Grid, IconButton } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 
 const items = [
-  { id: "1", title: "Project 1", subtitle: "Description of project 1Description of project 1Description of project 1Description of project 1Description of project 1Description of project 1" },
-  { id: "2", title: "Project 2", subtitle: "Description of project 2" },
-  { id: "3", title: "Project 3", subtitle: "Description of project 3" },
-  { id: "4", title: "Project 4", subtitle: "Description of project 4Description of project 4Description of project 4Description of project 4Description of project 4" },
+  { id: "1", title: "Project title", subtitle: "Description 1" },
+  { id: "2", title: "Project title ", subtitle: "Description 2" },
+  { id: "3", title: "Project title", subtitle: "Description 3" },
+  { id: "4", title: "Project title", subtitle: "Description 4" },
 ];
 
 // Variants for staggered card animation
