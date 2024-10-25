@@ -16,6 +16,7 @@ const AboutPage = () => {
       color="gray.100"
       borderRadius="md"
       boxShadow="lg"
+      pb={{base:'100px', md:'10px'}}
     >
       <MotionBox
         initial={{ opacity: 0, y: 50 }}
