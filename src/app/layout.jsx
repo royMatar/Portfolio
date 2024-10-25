@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Box
             display="flex"
-            minHeight="100vh"
+            minHeight="80vh"
             bg="black"
             color="#D3D3D3"
             position="relative"
