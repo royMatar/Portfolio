@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import HomePage from './components/HomePage'
+import HomePage from "./components/HomePage";
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
 
@@ -17,24 +17,24 @@ export default function Home() {
     <main>
       {!showContent && (
         <>
-   <motion.div
+          <motion.div
             style={{
               position: "fixed",
               top: 0,
-              left: 0, 
+              left: 0,
               height: "100vh",
-              background: "linear-gradient(to right, #00C6FF, #0072FF)", 
+              background: "linear-gradient(to right, #00C6FF, #0072FF)",
               zIndex: 1000,
             }}
-            initial={{ width: "0%" }}  
-            animate={{ width: "200%" }}  
+            initial={{ width: "0%" }}
+            animate={{ width: "200%" }}
             transition={{ duration: 0.4 }}
           />
           <motion.div
             style={{
               position: "fixed",
               top: 0,
-              left: 0,  
+              left: 0,
               height: "100vh",
               backgroundColor: "black",
               zIndex: 1000,
@@ -46,10 +46,12 @@ export default function Home() {
         </>
       )}
       {/* Content Fade-In Animation */}
-      {showContent && (<>
-        <h2><HomePage/></h2>
-          </>
-
+      {showContent && (
+        <>
+          <h2>
+            <HomePage />
+          </h2>
+        </>
       )}
     </main>
   );

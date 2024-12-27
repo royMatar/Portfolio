@@ -33,7 +33,7 @@ const Home = () => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      height="90vh"
+      height="100vh"
       zIndex={1}
       as={motion.div}
       initial="hidden"

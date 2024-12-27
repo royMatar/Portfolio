@@ -8,6 +8,7 @@ const items = [
   { id: "2", title: "Project title ", subtitle: "Description 2" },
   { id: "3", title: "Project title", subtitle: "Description 3" },
   { id: "4", title: "Project title", subtitle: "Description 4" },
+  
 ];
 
 const cardVariants = {
@@ -48,7 +49,7 @@ const ProjectCardStack = () => {
   }, [selectedId]);
 
   return (
-    <Box p={2}>
+    <Box pb={9}>
       <motion.div
         initial="hidden"
         animate="visible"
@@ -57,11 +58,11 @@ const ProjectCardStack = () => {
       >
         <Grid
           templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
-          gap={6}
+          gap={3}
           alignItems="center"
         >
           {items.map((item) => (
-            <Box display="flex" justifyContent="center" key={item.id}>
+            <Box display="flex" justifyContent="start" key={item.id}>
               <motion.div
                 layoutId={item.id}
                 onClick={() => setSelectedId(item.id)}

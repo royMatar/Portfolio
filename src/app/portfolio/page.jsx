@@ -22,7 +22,7 @@ export default function Portfolio() {
               position: "fixed",
               top: 0,
               left: 0, 
-              height: "100vh",
+              minHeight: "90vh",
               background: "linear-gradient(to right, #00C6FF, #0072FF)", 
               zIndex: 1000,
             }}

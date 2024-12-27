@@ -55,8 +55,8 @@ export default function RootLayout({ children }) {
             {/* Heartbeat Signal */}
             <Box
               position="absolute"
-              top={{ base: "10px", md: "auto" }} // Top for small screens, auto for large screens
-              left={{ base: "10px", md: "52%" }} // Center horizontally for large screens
+              top={{ base: "25px", md: "auto" }} // Top for small screens, auto for large screens
+              left={{ base: "20px", md: "52%" }} // Center horizontally for large screens
               bottom={{ base: "auto", md: "20px" }} // Move to bottom for large screens
               transform={{ base: "none", md: "translateX(-50%)" }} // Center horizontally for large screens
               padding="10px"

@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <Box
       as="nav"
-      backgroundColor={{ base: "transparent", md: "transparent" }}
+      backgroundColor={{ base: "black", md: "transparent" }}
       minW={{ base: "100vw", md: "auto" }}
       h={{ base: "10vh", md: "50vh" }}
       position={{ base: "fixed", md: "sticky" }}

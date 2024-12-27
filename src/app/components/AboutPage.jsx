@@ -10,19 +10,20 @@ const AboutPage = () => {
   return (
     <Box
       maxW="800px"
+      mt={6}
       mx="auto"
       p={6}
       pt={{ base: "70px", md: "90px" }}
       color="gray.100"
       borderRadius="md"
       boxShadow="lg"
-      pb={{base:'100px', md:'10px'}}
+      pb={{ base: "100px", md: "10px" }}
     >
       <MotionBox
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        textAlign="center"
+        textAlign="start"
         pb={3}
       >
         <Heading as="h1" size="2xl" mb={4} display="inline">
@@ -52,12 +53,9 @@ const AboutPage = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
       >
         <Text fontSize="lg" lineHeight="tall" textAlign="justify">
-          Hi, I&rsquo;m Roy Matar. My career began in mechanical engineering,
-          where I focused on MEP design, project management, and 2D/3D design,
-          as well as CNC operation for custom product creation. Later, I
-          expanded my skills as a NOC engineer in Lebanon&rsquo;s telecommunications
-          sector, responsible for infrastructure power installations and
-          maintenance, tackling complex engineering challenges.
+          Hi, I&rsquo;m Roy Matar. I started as a mechanical engineer,
+          specializing in MEP design, project management, 2D/3D design, and CNC
+          operation.
           <br />
           <br />
         </Text>
@@ -68,12 +66,30 @@ const AboutPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
       >
-        {" "}
         <Text fontSize="lg" lineHeight="tall" textAlign="justify">
-          During this time, I discovered a new passion for coding and digital
-          solutions. This curiosity sparked my transition into web development,
-          combining my engineering mindset with creative problem-solving in the
-          digital realm.
+          My passion for coding led me to transition into web development,
+          combining engineering precision with creative problem-solving. I
+          earned certifications in front-end and back-end development, mastering
+          <Text
+            as="span"
+            bgGradient="linear(to-r, #00C6FF, #0072FF)"
+            bgClip="text"
+            fontWeight="bold"
+          >
+            {" "}
+            React
+          </Text>{" "}
+          for interactive applications and{" "}
+          <Text
+            as="span"
+            bgGradient="linear(to-r, #00FF88, #00B76B)"
+            bgClip="text"
+            fontWeight="bold"
+          >
+            {" "}
+            Django
+          </Text>{" "}
+          for robust APIs.
           <br />
           <br />
         </Text>
@@ -85,51 +101,16 @@ const AboutPage = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
       >
         <Text fontSize="lg" lineHeight="tall" textAlign="justify">
-          To pursue this new path, I completed certifications in front-end and
-          back-end development, focusing on
-          <Text
-            as="span"
-            bgGradient="linear(to-r, #00C6FF, #0072FF)"
-            bgClip="text"
-            fontWeight="bold"
-          >
-            {" "}
-            React
-          </Text>{" "}
-          for creating responsive, interactive applications and <Text
-            as="span"
-            bgGradient="linear(to-r, #00FF88, #00B76B)"            bgClip="text"
-            fontWeight="bold"
-          >
-            {" "}
-            Django
-          </Text>{" "} for
-          robust API development. I&rsquo;ve since worked with various teams,
-          developing solutions that are both visually engaging and functionally
-          powerful.
-          <br />
-          <br />
-        </Text>
-      </MotionBox>
-
-      <MotionBox
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
-      >
-        <Text fontSize="lg" lineHeight="tall" textAlign="justify">
-          My journey has taught me to blend the precision of engineering with
-          the adaptability of software development. I&rsquo;m excited to continue
-          building and sharing my work.
+        Now, I create solutions that are visually engaging and functionally powerful, blending my engineering background with software development.
         </Text>
       </MotionBox>
 
       <Box
-        textAlign="center"
+        textAlign="start"
         mt={6}
         display="flex"
         gap={4}
-        justifyContent="center"
+        justifyContent="start"
       >
         <Link href="/about" passHref>
           <MotionButton
@@ -140,7 +121,7 @@ const AboutPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             whileHover={{ backgroundColor: "black" }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.5 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }}
           >
             Download CV{" "}
           </MotionButton>
@@ -157,7 +138,7 @@ const AboutPage = () => {
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 1.8 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 1.5 }}
           >
             Portfolio{" "}
           </MotionButton>

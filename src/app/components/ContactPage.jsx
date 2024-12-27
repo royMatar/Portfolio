@@ -9,6 +9,7 @@ const PortfolioPage = () => {
   return (
     <Box
       maxW="800px"
+      mt={6}
       mx="auto"
       p={6}
       pt={{ base: "70px", md: "100px" }}
@@ -26,6 +27,22 @@ const PortfolioPage = () => {
       >
         <Heading as="h1" size="2xl" mb={4} display="inline">
           Contact{" "}
+          <MotionBox
+                      as="span"
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, ease: "easeOut", delay: 2.1 }}
+                      display="inline-block"
+                    >
+                      <Text
+                        as="span"
+                        bgGradient="linear(to-r, #00C6FF, #0072FF)"
+                        bgClip="text"
+                        fontWeight="bold"
+                      >
+                        Me
+                      </Text>
+                    </MotionBox>
         </Heading>
       </MotionBox>
 

@@ -9,6 +9,7 @@ const PortfolioPage = () => {
   return (
     <Box
       maxW="800px"
+      mt={6}
       mx="auto"
       p={6}
       pt={{ base: "70px", md: "90px" }}
@@ -21,7 +22,7 @@ const PortfolioPage = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        textAlign="center" // Center text alignment
+        textAlign="start" // Center text alignment
         pb={3}
       >
         <Heading as="h1" size="2xl" mb={4} display="inline">
